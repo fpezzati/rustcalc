@@ -1,6 +1,6 @@
 use rustcalc::*;
 
-pub fn main() {
+fn main() {
     println!("Rust calc!");
     let a = IntegerOperand {
         value: 10
