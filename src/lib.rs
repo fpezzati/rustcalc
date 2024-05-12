@@ -16,3 +16,15 @@ impl Operator<IntegerOperand> for Add {
         }
     }
 }
+
+#[test]
+fn operator_Add_evaluates_two_integer_operand() {
+    let a = IntegerOperand {
+        value: 1
+    };
+    let b = IntegerOperand {
+        value: 2
+    };
+    let c = Add {};
+    assert_eq!(c.apply(a, b).value, 3);
+}

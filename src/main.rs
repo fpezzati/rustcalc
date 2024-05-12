@@ -1,7 +1,11 @@
 use rustcalc::*;
 
+pub mod plugloader;
+
 fn main() {
     println!("Rust calc!");
+
+    plugloader::load_modules_from("/tmp/rustcalcmods");
     let a = IntegerOperand {
         value: 10
     };

@@ -10,3 +10,11 @@ Can I build wasm32-wasi and run that module on browser? Well, it seems possible,
 Let's try add a first module...
 
 Having hard times about finding docs about plugins.. Maybe [this](https://stackoverflow.com/questions/77784495/build-a-wasm-module-from-rust-to-be-used-as-a-plugin-for-a-rust-process-reading) helps.
+
+This command:
+```
+wasmer run --dir=/tmp/rustcalcmods/ target/wasm32-wasi/debug/rustcalc.wasm
+```
+I used to run this little app. The `--dir` gives wasmer right to read (at least, maybe write too) a folder.
+
+Working on the plugloader.
